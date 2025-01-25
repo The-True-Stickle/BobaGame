@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput input;
 
     [SerializeField] private float speed = 5f;
-    private Vector3 direction;
+    private Vector3 moveDirection;
 
     private void Start()
     {
@@ -16,11 +16,20 @@ public class PlayerMovement : MonoBehaviour
         input = GetComponent<PlayerInput>();
     }
 
+    private void FixedUpdate()
+    {
+        HandleMovement();
+    }
+
     private void Update()
     {
-        direction.x = input.horizontalInput;
-        direction.y = input.verticalInput;
-//        controller.Move();
     }
+
+    private void HandleMovement()
+    { 
+        moveDirection.x = input.horizontalInput;
+        //moveDirection.z = input.verticalInput;
+        controller.Move(transform.TransformDirection(moveDirection) * speed * Time.deltaTime);
+	}
 
 }
