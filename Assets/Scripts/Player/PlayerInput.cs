@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public float horizontalInput;
-    public float verticalInput;
+    public KeyCode attackKey;
+    [HideInInspector] public float horizontalInput;
+    [HideInInspector] public float verticalInput;
 
-    public float mouseX;
-    public float mouseY;
+    [HideInInspector] public float mouseX;
+    [HideInInspector] public float mouseY;
+
+
 
     private void Update()
     {

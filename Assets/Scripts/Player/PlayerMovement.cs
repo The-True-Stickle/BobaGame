@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private void HandleMovement()
     { 
         moveDirection.x = input.horizontalInput;
-        //moveDirection.z = input.verticalInput;
+        moveDirection.z = input.verticalInput;
         controller.Move(transform.TransformDirection(moveDirection) * speed * Time.deltaTime);
 	}
 
