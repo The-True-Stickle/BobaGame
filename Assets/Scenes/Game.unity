@@ -806,6 +806,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1733603541}
+    - target: {fileID: 8754552076074254617, guid: 4dde66088f4c64ae9a0777aa2c4146b7, type: 3}
+      propertyPath: fireForce
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -5,15 +5,17 @@ using System;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] float damage;
     Rigidbody body;
     SphereCollider sphereCollider;
+
+    [SerializeField] float damage;
+    [SerializeField] float fireForce;
 
     private void Start()
     {
         sphereCollider = GetComponent<SphereCollider>();
         body = GetComponent<Rigidbody>();
-        body.AddForce(Vector3.forward * 50f, ForceMode.Impulse);
+        body.AddForce(Vector3.forward * fireForce, ForceMode.Impulse);
     }
 
     private void OnCollisionEnter(Collision collision)

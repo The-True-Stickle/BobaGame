@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] Projectile projectilePrefab;
-    public float fireForce;
     public Transform firePoint;
 
     private void Update()
