@@ -345,7 +345,7 @@ MonoBehaviour:
     bobaImage: {fileID: 6730247961408695795}
     bobaWaitTime: {fileID: 562858765243185473}
     bobaDesc: {fileID: 3401665034742319732}
-  bobaBotUI: {fileID: 6943740470766090715}
+  bobaBotUI: {fileID: 7934369740301121655}
 --- !u!223 &6489766814192582179
 Canvas:
   m_ObjectHideFlags: 0
