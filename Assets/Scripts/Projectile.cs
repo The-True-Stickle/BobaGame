@@ -15,7 +15,7 @@ public class Projectile : MonoBehaviour
     {
         sphereCollider = GetComponent<SphereCollider>();
         body = GetComponent<Rigidbody>();
-        body.AddForce(Vector3.forward * fireForce, ForceMode.Impulse);
+        body.AddForce(transform.forward * fireForce, ForceMode.Impulse);
     }
 
     private void OnCollisionEnter(Collision collision)

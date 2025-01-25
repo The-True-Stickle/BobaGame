@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f3ffa78013e24d88bf3fc9542a2ea02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackKey: 0
+  attackKey: 323
   horizontalInput: 0
   verticalInput: 0
   mouseX: 0
@@ -311,7 +311,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: -160059506626015911, guid: afee844f6b97c477c93188ba0b85e083, type: 3}
-  fireForce: 500
   firePoint: {fileID: 3446036929832328446}
 --- !u!1 &8353320572954226799
 GameObject:

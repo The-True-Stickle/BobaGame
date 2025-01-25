@@ -5,13 +5,19 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] Projectile projectilePrefab;
+    PlayerInput input;
     public Transform firePoint;
+
+    private void Start()
+    {
+        input = GetComponent<PlayerInput>();
+    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(input.attackKey))
         {
-            Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+            Instantiate(projectilePrefab, firePoint.position, transform.rotation);
 		}
     }
 }
