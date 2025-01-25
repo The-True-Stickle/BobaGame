@@ -6,6 +6,8 @@ using UnityEngine;
 public class BobaMachine : MonoBehaviour
 {
 
+    private bool currentlyMakingDrink = false;
+
     private void Start()
     {
         Debug.Log("Boba Machine Started");
@@ -23,18 +25,38 @@ public class BobaMachine : MonoBehaviour
         }
         else
         {
-            Debug.Log("BobaBotManager is null");    
+            Debug.Log("BobaBotManager is null");
         }
         //BobaBotManager.instance.OpenBobaBotUI(this);
+    }
+
+    public void openBobaUI()
+    {
+        if (currentlyMakingDrink)
+        {
+            Debug.Log("Currently making a drink, cannot make another");
+            return;
+        }
+        BobaBotManager.instance.OpenBobaBotUI(this);
+
+
     }
 
     public void makeBoba(BobaType bobaType)
     {
         Debug.Log("Making Boba of type: " + bobaType.name);
 
+        StartCoroutine(makeBobaCoroutine(bobaType));
         BobaBotManager.instance.CloseBobaBotUI();
     }
 
+    private IEnumerator makeBobaCoroutine(BobaType bobaType)
+    {
+        currentlyMakingDrink = true;
+        yield return new WaitForSeconds(bobaType.bobaWaitTime);
+        Debug.Log("Boba is ready");
+        currentlyMakingDrink = false;
+    }
 
 
 }
