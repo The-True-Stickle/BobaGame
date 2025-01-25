@@ -345,6 +345,7 @@ MonoBehaviour:
     bobaImage: {fileID: 6730247961408695795}
     bobaWaitTime: {fileID: 562858765243185473}
     bobaDesc: {fileID: 3401665034742319732}
+  bobaBotUI: {fileID: 6943740470766090715}
 --- !u!223 &6489766814192582179
 Canvas:
   m_ObjectHideFlags: 0
@@ -454,6 +455,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1577749315704750810}
     m_Modifications:
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5178629255450958879}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeBoba
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BobaBotManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4537608842969846730, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -619,6 +652,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1577749315704750810}
     m_Modifications:
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5178629255450958879}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeBoba
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BobaBotManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4537608842969846730, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -784,6 +845,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1577749315704750810}
     m_Modifications:
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5178629255450958879}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeBoba
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BobaBotManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681875057891485040, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4537608842969846730, guid: 1ae7118a35261e347a5a1d39029651c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
