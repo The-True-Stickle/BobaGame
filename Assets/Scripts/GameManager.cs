@@ -5,10 +5,10 @@ using UnityEngine;
 public class GameManager
 {
 
-    static int currentWave = 0;
-    static int currentScore = 0;
-    static int amountofDrinks = 0;
-    
+    public static int currentWave = 0;
+    public static int currentScore = 0;
+    public static int amountofDrinks = 0;
+    public static string gameState = "ACTIVE";
 
 
 
