@@ -1477,7 +1477,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8327792161961278371, guid: 273738275bbeb47ceb5e80c2e46cf5f3, type: 3}
       propertyPath: m_Name
-      value: BobaPool_Stawberry
+      value: BobaPool_Strawberry
       objectReference: {fileID: 0}
     - target: {fileID: 8692063698921465537, guid: 273738275bbeb47ceb5e80c2e46cf5f3, type: 3}
       propertyPath: m_LocalPosition.x
