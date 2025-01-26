@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BobaType 1
   m_EditorClassIdentifier: 
   bobaName: Strawberry Tea
-  bobaImage: {fileID: 21300000, guid: 2c6bc654897c4a14da2bf2fb3fab92ce, type: 3}
+  bobaImage: {fileID: 21300000, guid: 3e78077d0e6d0934e85310a2eb3d47f9, type: 3}
   bobaWaitTime: 7
   bobaDesc: Something something
