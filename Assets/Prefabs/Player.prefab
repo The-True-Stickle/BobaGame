@@ -279,6 +279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackKey: 323
+  interactKey: 101
+  reloadKey: 114
   horizontalInput: 0
   verticalInput: 0
   mouseX: 0
