@@ -67,8 +67,13 @@ public class PlayerAttack : MonoBehaviour
         currentBobaInCup--;
         Debug.Log("Boba in Mouth: " + currentBobaInMouth + ", Boba in Cup: " + currentBobaInCup);
         bobaFresh = false;
+        updateImage(currentBobaType);
+    }
 
-        GameObject.FindObjectOfType<GameUIHandler>().updateDrinkImage(currentBobaType);
+    public void updateImage(BobaType type)
+    {
+        GameObject.FindObjectOfType<GameUIHandler>().updateDrinkImage(type);
+
     }
 
     private void Fire()
