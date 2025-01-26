@@ -12,7 +12,8 @@ public class BobaMachine : MonoBehaviour
     {
         Debug.Log("Boba Machine Started");
 
-        StartCoroutine(delayedTest());
+        //StartCoroutine(delayedTest());
+        //StartCoroutine(delayedTest());
     }
 
     private IEnumerator delayedTest()
