@@ -1992,27 +1992,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2292912620293783363, guid: cce3c16a0800ac84e849cce7517322a6, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.231
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2292912620293783363, guid: cce3c16a0800ac84e849cce7517322a6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3654377521917686833, guid: cce3c16a0800ac84e849cce7517322a6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3654377521917686833, guid: cce3c16a0800ac84e849cce7517322a6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3654377521917686833, guid: cce3c16a0800ac84e849cce7517322a6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3654377521917686833, guid: cce3c16a0800ac84e849cce7517322a6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7030585514060111582, guid: cce3c16a0800ac84e849cce7517322a6, type: 3}
       propertyPath: m_Name
@@ -2020,7 +2020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7030585514060111582, guid: cce3c16a0800ac84e849cce7517322a6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8101733936110315700, guid: cce3c16a0800ac84e849cce7517322a6, type: 3}
       propertyPath: m_Pivot.x

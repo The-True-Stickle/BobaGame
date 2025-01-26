@@ -13,7 +13,7 @@ public class BobaMachine : MonoBehaviour
         Debug.Log("Boba Machine Started");
 
         //StartCoroutine(delayedTest());
-        //StartCoroutine(delayedTest());
+        StartCoroutine(delayedTest());
     }
 
     private IEnumerator delayedTest()
@@ -56,6 +56,12 @@ public class BobaMachine : MonoBehaviour
         currentlyMakingDrink = true;
         yield return new WaitForSeconds(bobaType.bobaWaitTime);
         Debug.Log("Boba is ready");
+
+        //DELETE
+        GameObject.FindAnyObjectByType<BobaQueueManager>().AddDrinkToQueue(bobaType);
+        GameObject.FindAnyObjectByType<BobaQueueManager>().AddDrinkToQueue(bobaType);
+        GameObject.FindAnyObjectByType<BobaQueueManager>().AddDrinkToQueue(bobaType);
+
         currentlyMakingDrink = false;
     }
 
