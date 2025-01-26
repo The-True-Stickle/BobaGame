@@ -41,7 +41,7 @@ public class AudioManager : MonoBehaviour
 
     public void SetClip(AudioSource source, AudioClip clip)
     {
-        source.clip = clip;   
+        source.clip = clip;
     }
 
     public void PlayCurrentClip(AudioSource source, bool loop = false)

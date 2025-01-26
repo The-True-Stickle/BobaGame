@@ -31,16 +31,20 @@ public class PlayerAttack : MonoBehaviour
         {
             Fire();
 		}
+
         if (Input.GetKeyDown(input.reloadKey))
         { 
-            AudioManager.Instance.SetClip(AudioManager.Instance.sfxSource, AudioManager.Instance.drinkClip);
-            AudioManager.Instance.PlayCurrentClip(AudioManager.Instance.sfxSource, true);
-		}
-        if (Input.GetKeyUp(input.reloadKey))
-        {
-            AudioManager.Instance.StopCurrentClip(AudioManager.Instance.sfxSource);
-		}
-	    if (Input.GetKey(input.reloadKey))
+            if (currentBobaInCup > 0)
+            {
+                AudioManager.Instance.SetClip(AudioManager.Instance.sfxSource, AudioManager.Instance.drinkClip);
+                AudioManager.Instance.PlayCurrentClip(AudioManager.Instance.sfxSource, true);
+            }
+            else 
+			{
+                AudioManager.Instance.PlayClip(AudioManager.Instance.inhaleClip);
+			}
+        }
+        if (Input.GetKey(input.reloadKey))
         {
             // Multiple Random.Range so it's more real lol
             reloadTimer += Time.deltaTime * Random.Range(1f, 3f);
@@ -50,6 +54,11 @@ public class PlayerAttack : MonoBehaviour
                 reloadTimer = 0;
             }
         }
+        if (Input.GetKeyUp(input.reloadKey))
+        {
+            AudioManager.Instance.StopCurrentClip(AudioManager.Instance.sfxSource);
+		}
+
         if (Input.GetKeyDown(input.changeCupKey))
         {
            // GetNewCup();
