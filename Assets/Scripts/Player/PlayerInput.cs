@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     public KeyCode attackKey;
+    public KeyCode interactKey;
+    public KeyCode reloadKey;
+
     [HideInInspector] public float horizontalInput;
     [HideInInspector] public float verticalInput;
 
     [HideInInspector] public float mouseX;
     [HideInInspector] public float mouseY;
-
-
 
     private void Update()
     {

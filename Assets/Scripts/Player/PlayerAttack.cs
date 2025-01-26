@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] Projectile projectilePrefab;
+    [SerializeField] ProjectilePool currentPool;
     PlayerInput input;
     public Transform firePoint;
 
@@ -17,7 +17,10 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(input.attackKey))
         {
-            Instantiate(projectilePrefab, firePoint.position, transform.rotation);
+            Projectile aProjectile = currentPool.GetProjectile();
+            aProjectile.transform.position = firePoint.position;
+            aProjectile.transform.rotation = transform.rotation;
+            aProjectile.gameObject.SetActive(true);
 		}
     }
 }

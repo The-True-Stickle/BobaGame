@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 4869351210494877385}
   - component: {fileID: 8403564822765916921}
   - component: {fileID: 8754552076074254617}
+  - component: {fileID: 6287609612895000069}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -279,6 +280,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackKey: 323
+  interactKey: 101
+  reloadKey: 114
   horizontalInput: 0
   verticalInput: 0
   mouseX: 0
@@ -310,8 +313,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faff02c6491304898bc31b3826c77a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: -160059506626015911, guid: afee844f6b97c477c93188ba0b85e083, type: 3}
+  currentPool: {fileID: 0}
   firePoint: {fileID: 3446036929832328446}
+--- !u!114 &6287609612895000069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6577097635277779100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7389910cfee714054a2873180851f889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8353320572954226799
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
     PlayerInput input;
+    PlayerAttack playerAttack; // TODO: for adjust the fire point
     public Camera cam;
 
     [SerializeField] float sensX;
@@ -15,6 +16,7 @@ public class PlayerLook : MonoBehaviour
     private void Start()
     {
         input = GetComponent<PlayerInput>();
+        playerAttack = GetComponent<PlayerAttack>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         StartCoroutine(StartDelay());
