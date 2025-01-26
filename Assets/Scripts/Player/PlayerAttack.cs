@@ -10,9 +10,11 @@ public class PlayerAttack : MonoBehaviour
     public int maxBobaInCup;
     public int maxBobaInMouth;
     public float reloadTime;
+    public bool bobaFresh = false;
 
     [Header("Debug")]
     public int currentBobaInCup;
+    public BobaType currentBobaType;
     public int currentBobaInMouth;
     [SerializeField] private float reloadTimer;
     [SerializeField] private ProjectilePool currentBobaPool;
@@ -51,6 +53,8 @@ public class PlayerAttack : MonoBehaviour
         if (currentBobaInCup <= 0)
         {
             Debug.Log("There is no more drinks! Right-click moush to change a new cup!");
+            GameObject.FindObjectOfType<GameUIHandler>().updateDrinkImage(null);
+
             return;
 		}
         if (currentBobaInMouth >= maxBobaInMouth)
@@ -61,6 +65,9 @@ public class PlayerAttack : MonoBehaviour
         currentBobaInMouth++;
         currentBobaInCup--;
         Debug.Log("Boba in Mouth: " + currentBobaInMouth + ", Boba in Cup: " + currentBobaInCup);
+        bobaFresh = false;
+
+        GameObject.FindObjectOfType<GameUIHandler>().updateDrinkImage(currentBobaType);
     }
 
     private void Fire()
@@ -82,13 +89,16 @@ public class PlayerAttack : MonoBehaviour
     public void GetNewCup()
     {
         currentBobaInCup = maxBobaInCup;
+        bobaFresh = true;
         Debug.Log("Got a new cup! Boba in Cup: " + currentBobaInCup);
 	}
 
 
     public void HandleSwitchDrink(BobaType bobaType)
-    { 
-	    if (Input.GetKeyDown(input.brownSugarKey) || bobaType.bobaName == "Milk Tea")
+    {
+        currentBobaType = bobaType;
+
+        if (Input.GetKeyDown(input.brownSugarKey) || bobaType.bobaName == "Milk Tea")
         {
             currentBobaPool = bobaPools[0];
             Debug.Log("Change to " + currentBobaPool.name);
@@ -103,6 +113,8 @@ public class PlayerAttack : MonoBehaviour
             currentBobaPool = bobaPools[2];
             Debug.Log("Change to " + currentBobaPool.name);
         }
+        bobaFresh = true;
+        GameObject.FindObjectOfType<GameUIHandler>().updateDrinkImage(bobaType);
     }
 
 }

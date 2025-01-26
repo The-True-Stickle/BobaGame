@@ -790,6 +790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8101733936110315700}
   - component: {fileID: 7073574709713549709}
+  - component: {fileID: 1781135452149335244}
   - component: {fileID: 1292384741505905426}
   - component: {fileID: 546810066849111157}
   m_Layer: 5
@@ -842,6 +843,28 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1781135452149335244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7030585514060111582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bdf64cfd17c27429a0a600f0667e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAttack: {fileID: 0}
+  currentDrinkImage: {fileID: 2730184538238266324}
+  drinkSprites:
+  - {fileID: 21300000, guid: 2c6bc654897c4a14da2bf2fb3fab92ce, type: 3}
+  - {fileID: 21300000, guid: f768977f3f645dc48b6a9ce8b357df28, type: 3}
+  - {fileID: 21300000, guid: 3e78077d0e6d0934e85310a2eb3d47f9, type: 3}
+  - {fileID: 21300000, guid: d73b41523079fba49b1d0748e797daef, type: 3}
+  - {fileID: 21300000, guid: ec8ac62b66574664b82bfb51e07ab370, type: 3}
+  - {fileID: 21300000, guid: 244583d02a2e36e4ba0b10d695d72a9f, type: 3}
+  bobaDrankText: {fileID: 345780202244323321}
 --- !u!114 &1292384741505905426
 MonoBehaviour:
   m_ObjectHideFlags: 0
