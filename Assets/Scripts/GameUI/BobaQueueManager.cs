@@ -56,8 +56,11 @@ public class BobaQueueManager : MonoBehaviour
 
     public void ServeDrink(BobaType bobaType)
     {
+        Debug.Log("Searching for: " + bobaType.bobaName);
+
         for (int i = 0; i < orderQueue.Count; i++)
         {
+            Debug.Log("Checked: " + orderQueue[i].bobaName + " with " + bobaType.bobaName + "");
             if (orderQueue[i].bobaName == bobaType.bobaName)
             {
                 Debug.Log("Boba has been served");
