@@ -327,8 +327,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bobaTypes:
+  - {fileID: 11400000, guid: 63c030e8a39f82f45a1c663ec2cc0830, type: 2}
   - {fileID: 11400000, guid: 1f511337e12c3c541ba75abaa184adf0, type: 2}
-  - {fileID: 11400000, guid: 1f511337e12c3c541ba75abaa184adf0, type: 2}
+  - {fileID: 11400000, guid: 62bc8f756e247c944a4adb87c422571f, type: 2}
+  playerLook: {fileID: 0}
   menuComponent:
   - bobaButton: {fileID: 994372962772566698}
     bobaName: {fileID: 4834983972724699013}
@@ -346,6 +348,7 @@ MonoBehaviour:
     bobaWaitTime: {fileID: 562858765243185473}
     bobaDesc: {fileID: 3401665034742319732}
   bobaBotUI: {fileID: 7934369740301121655}
+  menuOpen: 0
 --- !u!223 &6489766814192582179
 Canvas:
   m_ObjectHideFlags: 0
