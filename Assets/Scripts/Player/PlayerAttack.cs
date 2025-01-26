@@ -50,12 +50,12 @@ public class PlayerAttack : MonoBehaviour
     {
         if (currentBobaInCup <= 0)
         {
-            Debug.Log("There is no more drinks! Change a new cup!");
+            Debug.Log("There is no more drinks! Right-click moush to change a new cup!");
             return;
 		}
         if (currentBobaInMouth >= maxBobaInMouth)
         { 
-            Debug.Log("Too much boba in mouth! Can get anymore!");
+            Debug.Log("Too much boba in mouth! Can't get anymore!");
             return;
 		}
         currentBobaInMouth++;
@@ -67,7 +67,7 @@ public class PlayerAttack : MonoBehaviour
     { 
 	    if (currentBobaInMouth <= 0)
         {
-            Debug.Log("There is no boba in mouth! Press R to reload!");
+            Debug.Log("There is no boba in mouth! Pressing R to reload!");
             return;
 		}
 
