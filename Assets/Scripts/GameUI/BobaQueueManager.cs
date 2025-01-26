@@ -22,12 +22,22 @@ public class BobaQueueManager : MonoBehaviour
     public struct BobaOrder
     {
         public BobaType bobaType;
+        public string bobaName;
         public float timeLeft;
         public orderUI orderUI;
+        public Coroutine timeDownBoba;
     }
 
     private List<BobaOrder> orderQueue = new List<BobaOrder>();
 
+    [SerializeField]
+    private List<BobaType> bobaTypes = new List<BobaType>();
+
+    public void enemyAddsDrink()
+    {
+        AddDrinkToQueue(bobaTypes[Random.Range(0, bobaTypes.Count)]);
+    }
+    
     public void AddDrinkToQueue(BobaType bobaType)
     {
         BobaOrder newOrder = new BobaOrder();
@@ -39,8 +49,29 @@ public class BobaQueueManager : MonoBehaviour
         newOrder.orderUI.slider.value = 1;
         newOrder.orderUI.image.sprite = bobaType.bobaImage;
         newOrder.orderUI.orderUIObj = newOrderObj;
+        newOrder.bobaName = bobaType.bobaName;
         orderQueue.Add(newOrder);
-        StartCoroutine(timeDownBoba(newOrder));
+        newOrder.timeDownBoba = StartCoroutine(timeDownBoba(newOrder));
+    }
+
+    public void ServeDrink(BobaType bobaType)
+    {
+        for (int i = 0; i < orderQueue.Count; i++)
+        {
+            if (orderQueue[i].bobaName == bobaType.bobaName)
+            {
+                Debug.Log("Boba has been served");
+                if (orderQueue[i].timeDownBoba != null)
+                {
+                    StopCoroutine(orderQueue[i].timeDownBoba);
+
+                }
+                GameObject.Destroy(orderQueue[i].orderUI.orderUIObj);
+                orderQueue.Remove(orderQueue[i]);
+                return;
+            }
+        }
+        Debug.Log("Boba not found");
     }
 
     private void Start()

@@ -45,6 +45,28 @@ public class PlayerInteract : MonoBehaviour
                     BobaBotManager.instance.OpenBobaBotUI(bobaMachine);
                 }
             }
+            else if (hit.transform.TryGetComponent(out RegisterStuff cashRegister))
+            {
+                Debug.DrawRay(transform.position, transform.forward * 10f, Color.red);
+                if (Input.GetKeyDown(input.interactKey))
+                {
+                    PlayerAttack playerAttack = GetComponent<PlayerAttack>();
+
+                    if (playerAttack.bobaFresh)
+                    {
+                        cashRegister.ServeDrink(playerAttack.currentBobaType);
+                        playerAttack.bobaFresh = false;
+                        playerAttack.currentBobaInCup = 0;
+                        playerAttack.updateImage(null);
+
+                    }
+                    else
+                    {
+                        Debug.Log("That's not servable!!");
+                    }
+
+                }
+            }
 		}
     }
 }
