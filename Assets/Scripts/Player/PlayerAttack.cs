@@ -75,7 +75,7 @@ public class PlayerAttack : MonoBehaviour
         Debug.Log("Boba in Mouth: " + currentBobaInMouth);
         Projectile aProjectile = currentBobaPool.GetProjectile();
         aProjectile.transform.position = firePoint.position;
-        aProjectile.transform.rotation = transform.rotation;
+        aProjectile.transform.rotation = firePoint.rotation;
         aProjectile.gameObject.SetActive(true);
     }
 

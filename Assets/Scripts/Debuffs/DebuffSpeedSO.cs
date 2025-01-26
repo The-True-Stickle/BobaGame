@@ -9,5 +9,6 @@ public class DebuffSpeedSO : ADebuffSO
     public override void Debuff(Enemy enemy)
     {
         enemy.DecreaseMoveSpeed(amount);
+        Debug.Log("Slowdown enemy!");
 	}
 }

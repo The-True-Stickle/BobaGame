@@ -20,12 +20,16 @@ public class Projectile : MonoBehaviour
         sphereCollider = GetComponent<SphereCollider>();
         body = GetComponent<Rigidbody>();
         body.AddForce(transform.forward * fireForce, ForceMode.Impulse);
+        body.constraints = RigidbodyConstraints.None;
         StartCoroutine(ReleaseDelay());
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         //sphereCollider.enabled = false;
+        body.velocity = Vector3.zero;
+        body.angularVelocity = Vector3.zero;
+        body.constraints = RigidbodyConstraints.FreezeAll;
         if (collision.gameObject.TryGetComponent(out EnemyHealth enemyHealth))
         {
             enemyHealth.TakeDamage(damage);

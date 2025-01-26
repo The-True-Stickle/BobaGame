@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
     PlayerInput input;
-    PlayerAttack playerAttack; // TODO: for adjusting the fire point in y axis
+    public Transform head;
     public Camera cam;
 
     [SerializeField] float sensX;
@@ -16,7 +16,6 @@ public class PlayerLook : MonoBehaviour
     private void Start()
     {
         input = GetComponent<PlayerInput>();
-        playerAttack = GetComponent<PlayerAttack>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         StartCoroutine(StartDelay());
@@ -55,11 +54,11 @@ public class PlayerLook : MonoBehaviour
     private void HandleLook()
     { 
         xRotation -= input.mouseY * Time.deltaTime * sensY;
-
         xRotation = Mathf.Clamp(xRotation, -90, 90);
 
         cam.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        head.localRotation = cam.transform.localRotation;
         transform.rotation *= Quaternion.Euler(0, input.mouseX * sensX * Time.deltaTime, 0);
-	}
-        
+    }
+
 }
