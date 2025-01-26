@@ -58,6 +58,7 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("Too much boba in mouth! Can't get anymore!");
             return;
 		}
+        AudioManager.Instance.PlayClip(AudioManager.Instance.reloadClip);
         currentBobaInMouth++;
         currentBobaInCup--;
         Debug.Log("Boba in Mouth: " + currentBobaInMouth + ", Boba in Cup: " + currentBobaInCup);
@@ -73,6 +74,7 @@ public class PlayerAttack : MonoBehaviour
 
         currentBobaInMouth--;
         Debug.Log("Boba in Mouth: " + currentBobaInMouth);
+        AudioManager.Instance.PlayClip(AudioManager.Instance.shootClip);
         Projectile aProjectile = currentBobaPool.GetProjectile();
         aProjectile.transform.position = firePoint.position;
         aProjectile.transform.rotation = firePoint.rotation;
