@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
     PlayerInput input;
-    PlayerAttack playerAttack; // TODO: for adjust the fire point
+    PlayerAttack playerAttack; // TODO: for adjusting the fire point in y axis
     public Camera cam;
 
     [SerializeField] float sensX;

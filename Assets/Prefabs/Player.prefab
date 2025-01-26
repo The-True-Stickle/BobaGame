@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackKey: 323
+  changeCupKey: 324
   interactKey: 101
   reloadKey: 114
   horizontalInput: 0
@@ -315,6 +316,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPool: {fileID: 0}
   firePoint: {fileID: 3446036929832328446}
+  maxBobaInCup: 20
+  maxBobaInMouth: 8
+  reloadTime: 0.6
+  currentBobaInCup: 0
+  currentBobaInMouth: 0
+  reloadTimer: 0
 --- !u!114 &6287609612895000069
 MonoBehaviour:
   m_ObjectHideFlags: 0

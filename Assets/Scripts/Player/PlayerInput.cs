@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     public KeyCode attackKey;
+    public KeyCode changeCupKey;
     public KeyCode interactKey;
     public KeyCode reloadKey;
 

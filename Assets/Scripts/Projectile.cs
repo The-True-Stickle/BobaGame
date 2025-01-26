@@ -20,11 +20,6 @@ public class Projectile : MonoBehaviour
         StartCoroutine(ReleaseDelay());
     }
 
-    private void OnDisable()
-    {
-        
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         //sphereCollider.enabled = false;
