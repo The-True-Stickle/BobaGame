@@ -8,6 +8,9 @@ public class PlayerInput : MonoBehaviour
     public KeyCode changeCupKey;
     public KeyCode interactKey;
     public KeyCode reloadKey;
+    public KeyCode brownSugarKey;
+    public KeyCode mochaKey;
+    public KeyCode strawberryKey;
 
     [HideInInspector] public float horizontalInput;
     [HideInInspector] public float verticalInput;

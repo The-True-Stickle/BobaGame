@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] ProjectilePool currentPool;
+    [SerializeField] ProjectilePool[] bobaPools;
     PlayerInput input;
     public Transform firePoint;
     public int maxBobaInCup;
@@ -15,11 +15,12 @@ public class PlayerAttack : MonoBehaviour
     public int currentBobaInCup;
     public int currentBobaInMouth;
     [SerializeField] private float reloadTimer;
+    [SerializeField] private ProjectilePool currentBobaPool;
 
     private void Start()
     {
         input = GetComponent<PlayerInput>();
-        GetNewCup();
+        currentBobaPool = bobaPools[0];
     }
 
     private void Update()
@@ -30,6 +31,7 @@ public class PlayerAttack : MonoBehaviour
 		}
 	    if (Input.GetKey(input.reloadKey))
         {
+            // Multiple Random.Range so it's more real lol
             reloadTimer += Time.deltaTime * Random.Range(1f, 3f);
             if (reloadTimer >= reloadTime)
             {
@@ -41,6 +43,7 @@ public class PlayerAttack : MonoBehaviour
         {
             GetNewCup();
 		}
+        HandleSwitchDrink();
     }
 
     private void Reload()
@@ -70,7 +73,7 @@ public class PlayerAttack : MonoBehaviour
 
         currentBobaInMouth--;
         Debug.Log("Boba in Mouth: " + currentBobaInMouth);
-        Projectile aProjectile = currentPool.GetProjectile();
+        Projectile aProjectile = currentBobaPool.GetProjectile();
         aProjectile.transform.position = firePoint.position;
         aProjectile.transform.rotation = transform.rotation;
         aProjectile.gameObject.SetActive(true);
@@ -81,4 +84,24 @@ public class PlayerAttack : MonoBehaviour
         currentBobaInCup = maxBobaInCup;
         Debug.Log("Get a new cup! Boba in Cup: " + currentBobaInCup);
 	}
+
+    private void HandleSwitchDrink()
+    { 
+	    if (Input.GetKeyDown(input.brownSugarKey))
+        {
+            currentBobaPool = bobaPools[0];
+            Debug.Log("Change to " + currentBobaPool.name);
+		}
+	    if (Input.GetKeyDown(input.strawberryKey))
+        {
+            currentBobaPool = bobaPools[1];
+            Debug.Log("Change to " + currentBobaPool.name);
+		}
+	    if (Input.GetKeyDown(input.mochaKey))
+        {
+            currentBobaPool = bobaPools[2];
+            Debug.Log("Change to " + currentBobaPool.name);
+        }
+    }
+
 }

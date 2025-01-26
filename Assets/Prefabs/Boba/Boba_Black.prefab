@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3796141041410702444}
   - component: {fileID: -160059506626015911}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: Boba_Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,9 +30,9 @@ Transform:
   m_GameObject: {fileID: 369682598871521681}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2458582, y: 2.8881035, z: -3.9798748}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1969ee662dcfcad40bff6c494197cc56, type: 2}
+  - {fileID: 2100000, guid: f5af6772ad0d94c38b55055846a65e95, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -146,5 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5780c14fbdda44952ada19577738a0e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pool: {fileID: 0}
   damage: 1
   fireForce: 20

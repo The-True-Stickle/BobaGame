@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8692063698921465537}
   - component: {fileID: 5957487130998268398}
   m_Layer: 0
-  m_Name: ProjectilePool
+  m_Name: BobaPool_Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initSize: 20
-  projectilePrefab: {fileID: -160059506626015911, guid: afee844f6b97c477c93188ba0b85e083, type: 3}
+  projectilePrefab: {fileID: -160059506626015911, guid: ff50b2798d6fe48c9b83a1f3f2698646, type: 3}
