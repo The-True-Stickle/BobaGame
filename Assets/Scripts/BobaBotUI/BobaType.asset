@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855f8aa09ff6e4944a904d4b21d08bf4, type: 3}
   m_Name: BobaType
   m_EditorClassIdentifier: 
-  bobaName: 
-  bobaImage: {fileID: 0}
-  bobaWaitTime: 0
-  bobaDesc: 
+  bobaName: Milk Tea
+  bobaImage: {fileID: 21300000, guid: 2c6bc654897c4a14da2bf2fb3fab92ce, type: 3}
+  bobaWaitTime: 3
+  bobaDesc: Standard firing rate but quick to make!
