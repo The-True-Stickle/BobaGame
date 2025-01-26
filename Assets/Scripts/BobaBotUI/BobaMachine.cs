@@ -17,7 +17,7 @@ public class BobaMachine : MonoBehaviour
 
     private IEnumerator delayedTest()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(10);
         Debug.Log("Delayed Test");
         if (BobaBotManager.instance != null)
         {

@@ -22,6 +22,8 @@ public class BobaBotManager : MonoBehaviour
         public TextMeshProUGUI bobaDesc;
     }
 
+    public PlayerLook playerLook;
+
     [SerializeField]
     private List<BobaMenuType> menuComponent = new List<BobaMenuType>();
 
@@ -29,6 +31,8 @@ public class BobaBotManager : MonoBehaviour
     private GameObject bobaBotUI;
 
     private BobaMachine currentlyUsedScript;
+
+    public bool menuOpen = false;
 
     private void Start()
     {
@@ -57,6 +61,8 @@ public class BobaBotManager : MonoBehaviour
     public void OpenBobaBotUI(BobaMachine machineScript)
     {
         bobaBotUI.SetActive(true);
+        menuOpen = true;
+        playerLook.toggleMouseInput(false);
         currentlyUsedScript = machineScript;
 
     }
@@ -64,6 +70,9 @@ public class BobaBotManager : MonoBehaviour
     public void CloseBobaBotUI()
     {
         bobaBotUI.SetActive(false);
+        playerLook.toggleMouseInput(true);
+
+        menuOpen = false;
     }
 
     public void MakeBoba(int bobaType)
