@@ -29,6 +29,15 @@ public class PlayerAttack : MonoBehaviour
         {
             Fire();
 		}
+        if (Input.GetKeyDown(input.reloadKey))
+        { 
+            AudioManager.Instance.SetClip(AudioManager.Instance.sfxSource, AudioManager.Instance.drinkClip);
+            AudioManager.Instance.PlayCurrentClip(AudioManager.Instance.sfxSource, true);
+		}
+        if (Input.GetKeyUp(input.reloadKey))
+        {
+            AudioManager.Instance.StopCurrentClip(AudioManager.Instance.sfxSource);
+		}
 	    if (Input.GetKey(input.reloadKey))
         {
             // Multiple Random.Range so it's more real lol
@@ -50,7 +59,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (currentBobaInCup <= 0)
         {
-            Debug.Log("There is no more drinks! Right-click moush to change a new cup!");
+            Debug.Log("There is no more drinks! Make a new cup!");
             return;
 		}
         if (currentBobaInMouth >= maxBobaInMouth)
@@ -58,9 +67,9 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("Too much boba in mouth! Can't get anymore!");
             return;
 		}
-        AudioManager.Instance.PlayClip(AudioManager.Instance.reloadClip);
         currentBobaInMouth++;
         currentBobaInCup--;
+        AudioManager.Instance.PlayClip(AudioManager.Instance.hitTeethClip);
         Debug.Log("Boba in Mouth: " + currentBobaInMouth + ", Boba in Cup: " + currentBobaInCup);
     }
 
@@ -74,7 +83,7 @@ public class PlayerAttack : MonoBehaviour
 
         currentBobaInMouth--;
         Debug.Log("Boba in Mouth: " + currentBobaInMouth);
-        AudioManager.Instance.PlayClip(AudioManager.Instance.shootClip);
+        AudioManager.Instance.PlayClip(AudioManager.Instance.fireClip, 0.5f);
         Projectile aProjectile = currentBobaPool.GetProjectile();
         aProjectile.transform.position = firePoint.position;
         aProjectile.transform.rotation = firePoint.rotation;
@@ -84,6 +93,7 @@ public class PlayerAttack : MonoBehaviour
     public void GetNewCup()
     {
         currentBobaInCup = maxBobaInCup;
+        AudioManager.Instance.PlayClip(AudioManager.Instance.newCupClip);
         Debug.Log("Got a new cup! Boba in Cup: " + currentBobaInCup);
 	}
 

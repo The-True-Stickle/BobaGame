@@ -19,19 +19,20 @@ public class Projectile : MonoBehaviour
     {
         sphereCollider = GetComponent<SphereCollider>();
         body = GetComponent<Rigidbody>();
+        body.drag = 0;
         body.AddForce(transform.forward * fireForce, ForceMode.Impulse);
-        body.constraints = RigidbodyConstraints.None;
         StartCoroutine(ReleaseDelay());
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         //sphereCollider.enabled = false;
-        body.velocity = Vector3.zero;
-        body.angularVelocity = Vector3.zero;
-        body.constraints = RigidbodyConstraints.FreezeAll;
+        //body.velocity = Vector3.zero;
+        //body.angularVelocity = Vector3.zero;
+        body.drag = 5;
         if (collision.gameObject.TryGetComponent(out EnemyHealth enemyHealth))
         {
+            AudioManager.Instance.PlayClip(AudioManager.Instance.enemyHitClip);
             enemyHealth.TakeDamage(damage);
 		}
         if (collision.gameObject.TryGetComponent(out Enemy enemy))
