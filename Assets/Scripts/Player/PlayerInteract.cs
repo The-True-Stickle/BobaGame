@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class PlayerInteract : MonoBehaviour
 {
     PlayerInput input;
     RaycastHit hit;
+
 
     private void Start()
     {
@@ -22,6 +24,24 @@ public class PlayerInteract : MonoBehaviour
                 Debug.DrawRay(transform.position, transform.forward * 10f, Color.red);
                 if (Input.GetKeyDown(input.interactKey))
                 {
+
+                    if (bobaMachine.drinkInMachine)
+                    {
+                        Debug.Log("There is already a drink in the machine");
+                        if(GetComponent<PlayerAttack>().currentBobaInCup > 0)
+                        {
+                            Debug.Log("Your hands are full");
+                        }
+                        else
+                        {
+                            GetComponent<PlayerAttack>().HandleSwitchDrink(bobaMachine.currentBobaType);
+                            GetComponent<PlayerAttack>().GetNewCup();
+                            bobaMachine.drinkTaken();
+
+                        }
+                        return;
+                    }
+
                     BobaBotManager.instance.OpenBobaBotUI(bobaMachine);
                 }
             }

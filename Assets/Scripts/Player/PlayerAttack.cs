@@ -41,9 +41,9 @@ public class PlayerAttack : MonoBehaviour
         }
         if (Input.GetKeyDown(input.changeCupKey))
         {
-            GetNewCup();
+           // GetNewCup();
 		}
-        HandleSwitchDrink();
+        //HandleSwitchDrink(null);
     }
 
     private void Reload()
@@ -81,25 +81,26 @@ public class PlayerAttack : MonoBehaviour
         aProjectile.gameObject.SetActive(true);
     }
 
-    private void GetNewCup()
+    public void GetNewCup()
     {
         currentBobaInCup = maxBobaInCup;
-        Debug.Log("Get a new cup! Boba in Cup: " + currentBobaInCup);
+        Debug.Log("Got a new cup! Boba in Cup: " + currentBobaInCup);
 	}
 
-    private void HandleSwitchDrink()
+
+    public void HandleSwitchDrink(BobaType bobaType)
     { 
-	    if (Input.GetKeyDown(input.brownSugarKey))
+	    if (Input.GetKeyDown(input.brownSugarKey) || bobaType.bobaName == "Milk Tea")
         {
             currentBobaPool = bobaPools[0];
             Debug.Log("Change to " + currentBobaPool.name);
 		}
-	    if (Input.GetKeyDown(input.strawberryKey))
+	    if (Input.GetKeyDown(input.strawberryKey) || bobaType.bobaName == "Strawberry Tea")
         {
             currentBobaPool = bobaPools[1];
             Debug.Log("Change to " + currentBobaPool.name);
 		}
-	    if (Input.GetKeyDown(input.mochaKey))
+	    if (Input.GetKeyDown(input.mochaKey) ||  bobaType.bobaName == "Matcha Tea")
         {
             currentBobaPool = bobaPools[2];
             Debug.Log("Change to " + currentBobaPool.name);

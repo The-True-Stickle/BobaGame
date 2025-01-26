@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 855f8aa09ff6e4944a904d4b21d08bf4, type: 3}
-  m_Name: BobaType
+  m_Name: BobaType 1
   m_EditorClassIdentifier: 
-  bobaName: Milk Tea
+  bobaName: Strawberry Tea
   bobaImage: {fileID: 21300000, guid: 2c6bc654897c4a14da2bf2fb3fab92ce, type: 3}
-  bobaWaitTime: 3
-  bobaDesc: Standard firing rate but quick to make!
+  bobaWaitTime: 7
+  bobaDesc: Something something
