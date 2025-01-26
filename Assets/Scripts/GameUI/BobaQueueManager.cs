@@ -28,6 +28,14 @@ public class BobaQueueManager : MonoBehaviour
 
     private List<BobaOrder> orderQueue = new List<BobaOrder>();
 
+    [SerializeField]
+    private List<BobaType> bobaTypes = new List<BobaType>();
+
+    public void enemyAddsDrink()
+    {
+        AddDrinkToQueue(bobaTypes[Random.Range(0, bobaTypes.Count)]);
+    }
+    
     public void AddDrinkToQueue(BobaType bobaType)
     {
         BobaOrder newOrder = new BobaOrder();

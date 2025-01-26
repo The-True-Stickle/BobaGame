@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 839861456233449615, guid: 7d4237fc8f20c4a61abb7393e499c52f, type: 3}
+      propertyPath: dollyCart
+      value: 
+      objectReference: {fileID: 8054092968265765481}
     - target: {fileID: 2927263364380984525, guid: 7d4237fc8f20c4a61abb7393e499c52f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.167971

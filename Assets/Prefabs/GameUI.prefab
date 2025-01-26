@@ -1169,3 +1169,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderQueueObj: {fileID: 1656839814822714524, guid: f4fc1c1437363684ba87c651769bbbc9, type: 3}
   orderUIContainer: {fileID: 8778225656900205040}
+  bobaTypes:
+  - {fileID: 11400000, guid: 63c030e8a39f82f45a1c663ec2cc0830, type: 2}
+  - {fileID: 11400000, guid: 63c030e8a39f82f45a1c663ec2cc0830, type: 2}
+  - {fileID: 11400000, guid: 63c030e8a39f82f45a1c663ec2cc0830, type: 2}
+  - {fileID: 11400000, guid: 63c030e8a39f82f45a1c663ec2cc0830, type: 2}
+  - {fileID: 11400000, guid: 63c030e8a39f82f45a1c663ec2cc0830, type: 2}
+  - {fileID: 11400000, guid: 1f511337e12c3c541ba75abaa184adf0, type: 2}
+  - {fileID: 11400000, guid: 1f511337e12c3c541ba75abaa184adf0, type: 2}
+  - {fileID: 11400000, guid: 1f511337e12c3c541ba75abaa184adf0, type: 2}
+  - {fileID: 11400000, guid: 62bc8f756e247c944a4adb87c422571f, type: 2}
+  - {fileID: 11400000, guid: 62bc8f756e247c944a4adb87c422571f, type: 2}

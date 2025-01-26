@@ -21,8 +21,10 @@ public class EnemyManager : MonoBehaviour
     {
         while (GameManager.gameState == "ACTIVE")
         {
-            yield return new WaitForSeconds(2f);
             GameObject enemy = Instantiate(enemyPrefab, paths[Random.Range(0, paths.Count)].transform.position, Quaternion.identity);
+            enemy.GetComponent<CinemachineDollyCart>().m_Path = paths[Random.Range(0, paths.Count)];
+            yield return new WaitForSeconds(8f);
+
         }
     }
 
