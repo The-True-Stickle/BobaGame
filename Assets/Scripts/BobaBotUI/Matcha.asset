@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Matcha
   m_EditorClassIdentifier: 
   bobaName: Matcha Tea
-  bobaImage: {fileID: 21300000, guid: 2c6bc654897c4a14da2bf2fb3fab92ce, type: 3}
+  bobaImage: {fileID: 21300000, guid: f768977f3f645dc48b6a9ce8b357df28, type: 3}
   bobaWaitTime: 5
   bobaDesc: Applies slowness to enemies on hit
