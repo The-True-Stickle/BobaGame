@@ -11,16 +11,43 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] float sensY;
     private float xRotation;
 
+
     private void Start()
     {
         input = GetComponent<PlayerInput>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        StartCoroutine(StartDelay());
+    }
+
+    private IEnumerator StartDelay()
+    {
+        //Waits till after the bobaBotManager has been initialized
+        yield return new WaitForSeconds(0.1f);
+        BobaBotManager.instance.playerLook = this;
+    }
+
+    public void toggleMouseInput(bool toggle)
+    {
+        if (toggle)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     private void Update()
     {
-        HandleLook();
+        if (!BobaBotManager.instance.menuOpen)
+        {
+            HandleLook();
+
+        }
     }
 
     private void HandleLook()
