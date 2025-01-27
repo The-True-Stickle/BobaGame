@@ -42,7 +42,11 @@ public class PlayerInteract : MonoBehaviour
                         return;
                     }
 
-                    BobaBotManager.instance.OpenBobaBotUI(bobaMachine);
+                    if (!bobaMachine.currentlyMakingDrink)
+                    {
+                        BobaBotManager.instance.OpenBobaBotUI(bobaMachine);
+
+                    }
                 }
             }
             else if (hit.transform.TryGetComponent(out RegisterStuff cashRegister))

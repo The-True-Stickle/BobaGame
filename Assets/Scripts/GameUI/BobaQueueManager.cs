@@ -94,6 +94,7 @@ public class BobaQueueManager : MonoBehaviour
             order.orderUI.slider.value = order.timeLeft / timeLeft;
         }
         Debug.Log("Boba has failed");
+        GameManager.starRating--;
         orderQueue.Remove(order);
         GameObject.Destroy(order.orderUI.orderUIObj);
 

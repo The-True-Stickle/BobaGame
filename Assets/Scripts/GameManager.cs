@@ -10,7 +10,7 @@ public class GameManager
     public static int amountofDrinks = 0;
     public static string gameState = "ACTIVE";
 
-
+    public static int starRating = 5;
 
 
 
