@@ -27,4 +27,9 @@ public class MenuButtons : MonoBehaviour
         SceneManager.LoadScene("creadit screan");
     }
 
+
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("New Scene");
+    }
 }
