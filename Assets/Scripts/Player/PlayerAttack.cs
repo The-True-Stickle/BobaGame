@@ -32,12 +32,22 @@ public class PlayerAttack : MonoBehaviour
             Fire();
 		}
 
+        HandleReload();
+
+        if (Input.GetKeyDown(input.changeCupKey))
+        {
+           // GetNewCup();
+		}
+        //HandleSwitchDrink(null);
+    }
+
+    private void HandleReload()
+    { 
         if (Input.GetKeyDown(input.reloadKey))
         { 
             if (currentBobaInCup > 0)
             {
-                AudioManager.Instance.SetClip(AudioManager.Instance.sfxSource, AudioManager.Instance.drinkClip);
-                AudioManager.Instance.PlayCurrentClip(AudioManager.Instance.sfxSource, true);
+                AudioManager.Instance.PlaySource(AudioSourceType.Drinking);
             }
             else 
 			{
@@ -56,21 +66,15 @@ public class PlayerAttack : MonoBehaviour
         }
         if (Input.GetKeyUp(input.reloadKey))
         {
-            AudioManager.Instance.StopCurrentClip(AudioManager.Instance.sfxSource);
-		}
-
-        if (Input.GetKeyDown(input.changeCupKey))
-        {
-           // GetNewCup();
-		}
-        //HandleSwitchDrink(null);
+            AudioManager.Instance.StopSource(AudioSourceType.Drinking);
+        }
     }
 
     private void Reload()
     {
         if (currentBobaInCup <= 0)
         {
-            Debug.Log("There is no more drinks! Right-click moush to change a new cup!");
+            Debug.Log("There is no more drinks! Go make a new cup!");
             GameObject.FindObjectOfType<GameUIHandler>().updateDrinkImage(null);
 
             return;
@@ -129,16 +133,16 @@ public class PlayerAttack : MonoBehaviour
             currentBobaPool = bobaPools[0];
             Debug.Log("Change to " + currentBobaPool.name);
 		}
-	    if (Input.GetKeyDown(input.strawberryKey) || bobaType.bobaName == "Strawberry Tea")
+	    if (Input.GetKeyDown(input.mochaKey) ||  bobaType.bobaName == "Matcha Tea")
         {
             currentBobaPool = bobaPools[1];
             Debug.Log("Change to " + currentBobaPool.name);
-		}
-	    if (Input.GetKeyDown(input.mochaKey) ||  bobaType.bobaName == "Matcha Tea")
+        }
+	    if (Input.GetKeyDown(input.strawberryKey) || bobaType.bobaName == "Strawberry Tea")
         {
             currentBobaPool = bobaPools[2];
             Debug.Log("Change to " + currentBobaPool.name);
-        }
+		}
         bobaFresh = true;
         GameObject.FindObjectOfType<GameUIHandler>().updateDrinkImage(bobaType);
     }

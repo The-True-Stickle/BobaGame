@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
             AudioManager.Instance.PlayClip(AudioManager.Instance.enemyHitClip);
             enemyHealth.TakeDamage(damage);
 		}
-        if (collision.gameObject.TryGetComponent(out Enemy enemy))
+        if (debuffSO != null && collision.gameObject.TryGetComponent(out Enemy enemy))
         {
             debuffSO.Debuff(enemy);
 		}

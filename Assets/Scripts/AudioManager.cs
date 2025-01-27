@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum AudioSourceType
+{ 
+    Music, Drinking, MachineWorking
+}
+
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
     public AudioSource musicSource;
+    public AudioSource drinkingSource;
+    public AudioSource machineWorkingSource;
     public AudioSource sfxSource;
 
     [Header("Audio Clips")]
     public AudioClip fireClip;
     public AudioClip hitTeethClip;
     public AudioClip drinkClip;
+    public AudioClip drinksFinisedClip;
     public AudioClip enemyHitClip;
     public AudioClip footstepClip;
     public AudioClip inhaleClip;
@@ -20,6 +28,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip newCupClip;
     public AudioClip chokeClip;
     public AudioClip stabStrawClip;
+    public AudioClip trashCanClip;
 
 
     private void Awake()
@@ -39,20 +48,36 @@ public class AudioManager : MonoBehaviour
         sfxSource.volume = volume;
 	}
 
-    public void SetClip(AudioSource source, AudioClip clip)
+    public void PlaySource(AudioSourceType type)
     {
-        source.clip = clip;
+        switch(type)
+        {
+            case AudioSourceType.Drinking:
+                drinkingSource.Play();
+                break;
+            case AudioSourceType.MachineWorking:
+                machineWorkingSource.Play();
+                break;
+            case AudioSourceType.Music:
+                musicSource.Play();
+                break;
+        }
     }
 
-    public void PlayCurrentClip(AudioSource source, bool loop = false)
+    public void StopSource(AudioSourceType type)
     {
-        source.loop = loop;
-        source.Play();
-	}
-
-    public void StopCurrentClip(AudioSource source)
-    {
-        source.Stop();
+        switch(type)
+        {
+            case AudioSourceType.Drinking:
+                drinkingSource.Stop();
+                break;
+            case AudioSourceType.MachineWorking:
+                machineWorkingSource.Stop();
+                break;
+            case AudioSourceType.Music:
+                musicSource.Stop();
+                break;
+        }
 	}
 }
 
