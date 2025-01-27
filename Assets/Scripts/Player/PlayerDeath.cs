@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
@@ -14,5 +15,13 @@ public class PlayerDeath : MonoBehaviour
         cam.SetActive(true);
         player.SetActive(true);
     }
+
+
+    private IEnumerator goToCredits()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("creadit screan");
+    }
+
 
 }

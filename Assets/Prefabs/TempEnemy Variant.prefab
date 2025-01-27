@@ -64,6 +64,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5255143123594275960, guid: 7d4237fc8f20c4a61abb7393e499c52f, type: 3}
+      propertyPath: m_Height
+      value: 3.2151098
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255143123594275960, guid: 7d4237fc8f20c4a61abb7393e499c52f, type: 3}
+      propertyPath: m_Radius
+      value: 0.84719956
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255143123594275960, guid: 7d4237fc8f20c4a61abb7393e499c52f, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0031497478
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255143123594275960, guid: 7d4237fc8f20c4a61abb7393e499c52f, type: 3}
+      propertyPath: m_Center.y
+      value: 0.6075549
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255143123594275960, guid: 7d4237fc8f20c4a61abb7393e499c52f, type: 3}
+      propertyPath: m_Center.z
+      value: -2.9122767e-11
+      objectReference: {fileID: 0}
     - target: {fileID: 8639475763438164461, guid: 7d4237fc8f20c4a61abb7393e499c52f, type: 3}
       propertyPath: m_Name
       value: TempEnemy Variant
