@@ -6,7 +6,7 @@ using UnityEngine;
 public class BobaMachine : MonoBehaviour
 {
 
-    private bool currentlyMakingDrink = false;
+    public bool currentlyMakingDrink = false;
 
     [SerializeField]
     private List<GameObject> drinks = new List<GameObject>();
