@@ -43,7 +43,7 @@ public class BobaBotManager : MonoBehaviour
         {
             menuComponent[i].bobaName.text = bobaTypes[i].bobaName;
             menuComponent[i].bobaImage.sprite = bobaTypes[i].bobaImage;
-            menuComponent[i].bobaWaitTime.text = bobaTypes[i].bobaWaitTime.ToString();
+            menuComponent[i].bobaWaitTime.text = bobaTypes[i].bobaWaitTime.ToString() + " Seconds";
             menuComponent[i].bobaDesc.text = bobaTypes[i].bobaDesc;
             //menuComponent[i].bobaButton.onClick.AddListener(delegate { MakeBoba(i); });
         }
