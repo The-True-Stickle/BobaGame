@@ -3583,18 +3583,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6577097635277779100, guid: 4dde66088f4c64ae9a0777aa2c4146b7, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8403564822765916921, guid: 4dde66088f4c64ae9a0777aa2c4146b7, type: 3}
-      propertyPath: head
-      value: 
-      objectReference: {fileID: 2074400924}
-    - target: {fileID: 8403564822765916921, guid: 4dde66088f4c64ae9a0777aa2c4146b7, type: 3}
-      propertyPath: firePoint
-      value: 
-      objectReference: {fileID: 1448314351}
     - target: {fileID: 8754552076074254617, guid: 4dde66088f4c64ae9a0777aa2c4146b7, type: 3}
       propertyPath: bobaPools.Array.data[0]
       value: 
@@ -4822,11 +4810,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 273738275bbeb47ceb5e80c2e46cf5f3, type: 3}
---- !u!4 &1448314351 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3446036929832328446, guid: 4dde66088f4c64ae9a0777aa2c4146b7, type: 3}
-  m_PrefabInstance: {fileID: 967406981}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1506742804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2927263364380984525, guid: 7d4237fc8f20c4a61abb7393e499c52f, type: 3}
@@ -5763,11 +5746,6 @@ Transform:
   - {fileID: 170322423}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2074400924 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2433592912963521518, guid: 4dde66088f4c64ae9a0777aa2c4146b7, type: 3}
-  m_PrefabInstance: {fileID: 967406981}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2142663468 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5287879748505621840, guid: eabe0347df897824a9683b63f184aaf8, type: 3}

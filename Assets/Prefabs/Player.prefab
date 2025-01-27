@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 6287609612895000069}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5da25a7ec7f54992aaad16928a317ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 0}
+  head: {fileID: 2433592912963521518}
   cam: {fileID: 7432414375510809789}
   sensX: 1000
   sensY: 1000
@@ -430,7 +430,9 @@ MonoBehaviour:
   maxBobaInCup: 10
   maxBobaInMouth: 10
   reloadTime: 0.6
+  bobaFresh: 0
   currentBobaInCup: 0
+  currentBobaType: {fileID: 0}
   currentBobaInMouth: 0
   reloadTimer: 0
   currentBobaPool: {fileID: 0}
