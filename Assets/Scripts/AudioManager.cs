@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance { get; private set; }
 
     public AudioSource musicSource;
+    public AudioSource titleScreenSource;
     public AudioSource drinkingSource;
     public AudioSource machineWorkingSource;
     public AudioSource sfxSource;
