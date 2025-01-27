@@ -60,7 +60,10 @@ public class BobaMachine : MonoBehaviour
     private IEnumerator makeBobaCoroutine(BobaType bobaType)
     {
         currentlyMakingDrink = true;
+        // TODO: This will be blocked when drinking sfx is playing
+        AudioManager.Instance.machineWorkingSource.Play();
         yield return new WaitForSeconds(bobaType.bobaWaitTime);
+        AudioManager.Instance.machineWorkingSource.Stop();
         currentBobaType = bobaType;
         Debug.Log("Boba is ready");
 

@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5780c14fbdda44952ada19577738a0e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debuffSO: {fileID: 0}
+  debuffSO: {fileID: 11400000, guid: d0ba57e15be6c496483330ffcab9d943, type: 2}
   damage: 1
   fireForce: 20
   pool: {fileID: 0}

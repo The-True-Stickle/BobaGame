@@ -26,5 +26,10 @@ public class EnemyHealth: MonoBehaviour
     {
         currentHealth -= amount;
 	}
+
+    public void Die()
+    {
+        currentHealth = 0;
+	}
 }
 

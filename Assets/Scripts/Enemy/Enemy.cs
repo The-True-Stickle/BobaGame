@@ -23,6 +23,11 @@ public class Enemy : MonoBehaviour
 
     }
 
+    public void Die()
+    {
+        GetComponent<EnemyHealth>().Die();
+	}
+
     private void Update()
     {
         if (GameManager.gameState == "ACTIVE")
