@@ -14,6 +14,7 @@ public class PlayerDeath : MonoBehaviour
     {
         cam.SetActive(true);
         player.SetActive(true);
+        StartCoroutine(goToCredits());
     }
 
 
