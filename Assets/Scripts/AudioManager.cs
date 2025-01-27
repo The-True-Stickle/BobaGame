@@ -19,7 +19,6 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip fireClip;
     public AudioClip hitTeethClip;
-    public AudioClip drinkClip;
     public AudioClip drinksFinisedClip;
     public AudioClip enemyHitClip;
     public AudioClip footstepClip;
