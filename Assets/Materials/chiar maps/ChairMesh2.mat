@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cir
+  m_Name: ChairMesh2
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -27,7 +27,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 28a83b51df3a6254db307093861742d0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 630089c1539ecd246a0e546b05c5b1d0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -35,7 +35,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
-        m_Texture: {fileID: 2800000, guid: 6fa260a36464a7a49b635f3c5613dd9e, type: 3}
+        m_Texture: {fileID: 2800000, guid: dfe5696d0dfdc1345b2c7e14c74a3ab9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
@@ -47,11 +47,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8ae31587b55c1d94593954cb96c27f5f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5509e66bd2e89e343997d809b1ff57af, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 60f6d397b0b3c984aa5ced9c2cc70daf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 362aafabdc26d3d4585a17fbf700a13a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -59,7 +59,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 6fa260a36464a7a49b635f3c5613dd9e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5ff70364a3b75ea49bd851bf5979ae46, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
