@@ -47,17 +47,20 @@ public class AudioManager : MonoBehaviour
         sfxSource.volume = volume;
 	}
 
-    public void PlaySource(AudioSourceType type)
+    public void PlaySource(AudioSourceType type, bool loop = true)
     {
         switch(type)
         {
             case AudioSourceType.Drinking:
+                drinkingSource.loop = loop;
                 drinkingSource.Play();
                 break;
             case AudioSourceType.MachineWorking:
+                machineWorkingSource.loop = loop;
                 machineWorkingSource.Play();
                 break;
             case AudioSourceType.Music:
+                musicSource.loop = loop;
                 musicSource.Play();
                 break;
         }
