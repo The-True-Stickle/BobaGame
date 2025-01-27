@@ -61,9 +61,9 @@ public class BobaMachine : MonoBehaviour
     {
         currentlyMakingDrink = true;
         // TODO: This will be blocked when drinking sfx is playing
-        AudioManager.Instance.machineWorkingSource.Play();
+        AudioManager.Instance.PlaySource(AudioSourceType.MachineWorking);
         yield return new WaitForSeconds(bobaType.bobaWaitTime);
-        AudioManager.Instance.machineWorkingSource.Stop();
+        AudioManager.Instance.StopSource(AudioSourceType.MachineWorking);
         currentBobaType = bobaType;
         Debug.Log("Boba is ready");
 
