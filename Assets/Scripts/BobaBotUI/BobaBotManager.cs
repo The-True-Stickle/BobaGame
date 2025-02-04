@@ -80,7 +80,7 @@ public class BobaBotManager : MonoBehaviour
 
 
         Debug.Log("Making Boba of type: " + bobaType);
-        currentlyUsedScript.makeBoba(bobaTypes[bobaType]);
+        currentlyUsedScript.MakeBoba(bobaTypes[bobaType]);
 
 
 

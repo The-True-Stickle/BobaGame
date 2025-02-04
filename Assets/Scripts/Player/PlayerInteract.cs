@@ -36,7 +36,7 @@ public class PlayerInteract : MonoBehaviour
                         {
                             GetComponent<PlayerAttack>().HandleSwitchDrink(bobaMachine.currentBobaType);
                             GetComponent<PlayerAttack>().GetNewCup();
-                            bobaMachine.drinkTaken();
+                            bobaMachine.DrinkTaken();
 
                         }
                         return;

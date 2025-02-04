@@ -5,11 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-
-
     public void PlayGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("GameScene");
     }
 
     public void QuitGame()
@@ -19,17 +17,16 @@ public class MenuButtons : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("start screen");
+        SceneManager.LoadScene("TitleScreenScene");
     }
 
     public void CreditsScreen()
     {
-        SceneManager.LoadScene("creadit screan");
+        SceneManager.LoadScene("CreditScene");
     }
-
 
     public void HowToPlay()
     {
-        SceneManager.LoadScene("New Scene");
+        SceneManager.LoadScene("InstructionScene");
     }
 }

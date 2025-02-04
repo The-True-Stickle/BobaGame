@@ -15,19 +15,6 @@ public class Enemy : MonoBehaviour
         dollyCart.m_Speed = moveSpeed;
     }
 
-
-    public void DecreaseMoveSpeed(float amount)
-    {
-        moveSpeed = Mathf.Clamp(moveSpeed - amount, 0, moveSpeed);
-        dollyCart.m_Speed = moveSpeed;
-
-    }
-
-    public void Die()
-    {
-        GetComponent<EnemyHealth>().Die();
-	}
-
     private void Update()
     {
         if (GameManager.gameState == "ACTIVE")
@@ -53,7 +40,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == ("Register"))
@@ -62,4 +48,17 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    // Debuffs
+    public void DecreaseMoveSpeed(float amount)
+    {
+        moveSpeed = Mathf.Clamp(moveSpeed - amount, 0, moveSpeed);
+        dollyCart.m_Speed = moveSpeed;
+
+    }
+
+    public void Die()
+    {
+        GetComponent<EnemyHealth>().Die();
+	}
 }

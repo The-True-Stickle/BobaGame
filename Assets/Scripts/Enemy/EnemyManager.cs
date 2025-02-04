@@ -5,6 +5,7 @@ using Cinemachine;
 
 public class EnemyManager : MonoBehaviour
 {
+    [SerializeField] float spawnInterval;
 
     [SerializeField]
     private GameObject enemyPrefab;
@@ -23,7 +24,7 @@ public class EnemyManager : MonoBehaviour
         {
             GameObject enemy = Instantiate(enemyPrefab, paths[Random.Range(0, paths.Count)].transform.position, Quaternion.identity);
             enemy.GetComponent<CinemachineDollyCart>().m_Path = paths[Random.Range(0, paths.Count)];
-            yield return new WaitForSeconds(8f);
+            yield return new WaitForSeconds(spawnInterval);
 
         }
     }

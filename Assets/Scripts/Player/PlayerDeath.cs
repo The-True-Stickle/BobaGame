@@ -14,15 +14,15 @@ public class PlayerDeath : MonoBehaviour
     {
         cam.SetActive(true);
         player.SetActive(true);
-        StartCoroutine(goToCredits());
+        StartCoroutine(GoToCredits());
     }
 
-
-    private IEnumerator goToCredits()
+    private IEnumerator GoToCredits()
     {
         yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("creadit screan");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SceneManager.LoadScene("CreditScene");
     }
-
 
 }

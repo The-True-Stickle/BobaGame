@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Jobs.LowLevel.Unsafe;
 using UnityEngine;
 
 public class BobaMachine : MonoBehaviour
@@ -17,27 +16,9 @@ public class BobaMachine : MonoBehaviour
     private void Start()
     {
         Debug.Log("Boba Machine Started");
-
-        //StartCoroutine(delayedTest());
-       // StartCoroutine(delayedTest());
     }
 
-    private IEnumerator delayedTest()
-    {
-        yield return new WaitForSeconds(10);
-        Debug.Log("Delayed Test");
-        if (BobaBotManager.instance != null)
-        {
-            BobaBotManager.instance.OpenBobaBotUI(this);
-        }
-        else
-        {
-            Debug.Log("BobaBotManager is null");
-        }
-        //BobaBotManager.instance.OpenBobaBotUI(this);
-    }
-
-    public void openBobaUI()
+    public void OpenBobaUI()
     {
         if (currentlyMakingDrink)
         {
@@ -49,18 +30,17 @@ public class BobaMachine : MonoBehaviour
 
     }
 
-    public void makeBoba(BobaType bobaType)
+    public void MakeBoba(BobaType bobaType)
     {
         Debug.Log("Making Boba of type: " + bobaType.name);
 
-        StartCoroutine(makeBobaCoroutine(bobaType));
+        StartCoroutine(MakeBobaRoutine(bobaType));
         BobaBotManager.instance.CloseBobaBotUI();
     }
 
-    private IEnumerator makeBobaCoroutine(BobaType bobaType)
+    private IEnumerator MakeBobaRoutine(BobaType bobaType)
     {
         currentlyMakingDrink = true;
-        // TODO: This will be blocked when drinking sfx is playing
         AudioManager.Instance.PlaySource(AudioSourceType.MachineWorking);
         yield return new WaitForSeconds(bobaType.bobaWaitTime);
         AudioManager.Instance.StopSource(AudioSourceType.MachineWorking);
@@ -80,15 +60,10 @@ public class BobaMachine : MonoBehaviour
                 break;
         }
         drinkInMachine = true;
-        //DELETE
-        //GameObject.FindAnyObjectByType<BobaQueueManager>().AddDrinkToQueue(bobaType);
-        //GameObject.FindAnyObjectByType<BobaQueueManager>().AddDrinkToQueue(bobaType);
-        //GameObject.FindAnyObjectByType<BobaQueueManager>().AddDrinkToQueue(bobaType);
-
         currentlyMakingDrink = false;
     }
 
-    public void drinkTaken()
+    public void DrinkTaken()
     {
         drinkInMachine = false;
         for (int i = 0; i < drinks.Count; i++)
